@@ -11815,7 +11815,7 @@ function firstbyte(f,o) {
 }
 
 function read_zip(data, opts) {
-	var zip, d = data;
+	var zip = new jszip(); d = data;
 	var o = opts||{};
 	if(!o.type) o.type = (has_buf && Buffer.isBuffer(data)) ? "buffer" : "base64";
 	switch(o.type) {
